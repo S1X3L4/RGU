@@ -6,16 +6,16 @@ Insert front & back to this document.
 
 Use Command 
 
-'''text
+'''powershell
 npm init
 npm install express
 '''
 
-'''text
+'''powershell
 node .\path_of_index.js
 '''
 
-'''text
+'''powershell
 git status
 git add
 '''

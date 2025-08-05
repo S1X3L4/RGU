@@ -28,7 +28,6 @@ app.use(express.static(dir, options));
 app.use(function ( req, res, next) {
     res.send('This page does not exist!')
 });
-
-app.listen(8000, function () {
-    console.log('Listening on http://localhost:8000/');
+app.listen(8080, function () {
+    console.log('Listening on http://localhost:8080/');
 });

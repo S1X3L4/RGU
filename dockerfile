@@ -1,21 +1,21 @@
-# Install dependencies
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+
 RUN npm ci --only=production
- 
-# Copy application code
+
 COPY . .
- 
-# Expose port (change if your app uses different port)
-EXPOSE 8000
- 
-# Create non-root user for security
-RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nodejs -u 1001 -G nodejs
- 
-# Change ownership of the app directory to nodejs user
-RUN chown -R nodejs:nodejs /app
- 
-# Switch to the nodejs user
+
+# Création du groupe et de l'utilisateur "nodejs"
+RUN groupadd -g 1001 nodejs && \
+    useradd -u 1001 -g nodejs -m nodejs && \
+    chown -R nodejs:nodejs /app
+
 USER nodejs
- 
-# Start the application
+
+EXPOSE 8080
+
 CMD ["npm", "start"]
+

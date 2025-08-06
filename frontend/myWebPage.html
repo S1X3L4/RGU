@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Price Calculator</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <html class="h-full bg-gray-900">
+  <body class="h-full">
+
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="mx-auto h-10 w-auto" />
+    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white">How much to charge?</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label for="salary" class="block text-sm/6 font-medium text-gray-100">Salary</label>
+        <div class="mt-2">
+          <input id="salary" type="text" name="salary" required autocomplete="salary" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+        </div>
+      </div>
+      <div>
+        <label for="days" class="block text-sm/6 font-medium text-gray-100">Days</label>
+        <div class="mt-2">
+          <input id="days" type="text" name="days" required autocomplete="days" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+        </div>
+      </div>
+     
+
+      <div>
+        <button onclick="handleClick()" type="button" class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Calculate your price</button>
+      </div>
+    </form>
+   <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <label id="finalPrice" class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white"> ??? </label>
+   </div>
+    
+    
+  </div>
+</div>
+
+ <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
